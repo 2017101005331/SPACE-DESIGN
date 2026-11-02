@@ -1,0 +1,2 @@
+import { ReactNode } from "react";
+export default function PageHero({title,subtitle,image}:{title:string;subtitle:string;image:string}){return <section className="inner-hero" style={{backgroundImage:`url('${image}')`}}><div className="absolute inset-0 flex items-end"><div className="site-container relative pb-16"><p className="eyebrow text-[#C8AD86]">Space Design</p><h1 className="inner-page-title mt-4">{title}</h1><p className="mt-5 max-w-xl text-white/70">{subtitle}</p></div></div></section>}

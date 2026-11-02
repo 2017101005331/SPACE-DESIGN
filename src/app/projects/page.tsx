@@ -1,0 +1,2 @@
+import PageHero from "@/components/PageHero"; import ProjectGallery from "@/components/ProjectGallery";
+export const metadata={title:"Projects"};export default function Page(){return <main><PageHero title="Selected projects" subtitle="A selection of work across retail, technology and lifestyle environments." image="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1800&q=85"/><section className="section bg-[#F8F7F4]"><div className="site-container"><ProjectGallery/></div></section></main>}

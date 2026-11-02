@@ -1,69 +1,14 @@
-import Image from "next/image";
-
-export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
-}
+import Link from "next/link";
+import { ArrowDown, ArrowRight, ArrowUpRight, DraftingCompass, Factory, Layers3, Ruler } from "lucide-react";
+import Reveal from "@/components/Reveal";
+const expertise=[["01","Retail Fixtures","Fixtures designed to shape brand stories, journeys and memorable shopping moments."],["02","Custom Furniture","Purpose-built furniture balancing form, function and material intelligence."],["03","Modular Systems","Adaptable systems that bring consistency and flexibility to every environment."],["04","Office Furniture","Considered workplace solutions for productive, people-focused interiors."],["05","Manufacturing Solutions","Design-to-production expertise with disciplined quality and precision."],["06","Installation Services","Coordinated delivery and installation across locations and project scales."]];
+const projects=[["Shoppers Stop","Retail","https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1400&q=85"],["Allen Solly","Retail","https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1400&q=85"],["South Indian Shopping Mall","Retail","https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=1400&q=85"],["Mi Experience Centre","Technology","https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85"]];
+export default function Home(){return <main>
+<section className="hero relative min-h-[760px] h-[100svh] overflow-hidden text-white"><div className="hero-image absolute inset-0"/><div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/35 to-transparent"/><div className="site-container relative flex h-full items-end pb-16 sm:pb-20"><div className="max-w-4xl"><Reveal><p className="eyebrow text-[#C8AD86]">Furniture · Fixtures · Systems</p><h1 className="hero-title mt-5">Designing Spaces.<br/><em>Creating Experiences.</em></h1><div className="mt-8 flex flex-col gap-4 sm:flex-row"><Link href="/projects" className="button-light">Explore projects <ArrowRight size={18}/></Link><Link href="/contact" className="button-outline">Contact us</Link></div></Reveal></div></div><Link href="#about" aria-label="Scroll to about" className="absolute bottom-10 right-[5%] hidden size-14 place-items-center rounded-full border border-white/40 md:grid"><ArrowDown className="animate-bounce" size={18}/></Link></section>
+<section id="about" className="section bg-[#F8F7F4]"><div className="site-container grid items-center gap-14 lg:grid-cols-2"><Reveal className="relative"><img className="h-[620px] w-full object-cover" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85" alt="Modern custom-designed workspace"/><div className="absolute -bottom-7 right-0 bg-[#171717] px-8 py-7 text-white md:right-[-30px]"><strong className="display text-4xl text-[#C8AD86]">Design.</strong><span className="block text-xs tracking-[.2em]">ENGINEER. MAKE.</span></div></Reveal><Reveal className="lg:px-10"><p className="eyebrow">Who we are</p><h2 className="section-title mt-5">From concept to creation, <em>space becomes experience.</em></h2><p className="body-copy mt-7">Space Design is a design, engineering and manufacturing company creating fixtures, furniture and complete spatial solutions. Our integrated approach unites creative intent with practical production.</p><p className="body-copy mt-5">From retail and hospitality to residences and institutions, we partner across disciplines to deliver spaces that work beautifully.</p><Link href="/about" className="text-link mt-9">Discover our story <ArrowUpRight size={18}/></Link></Reveal></div></section>
+<section className="section bg-white"><div className="site-container"><Reveal><p className="eyebrow">Capabilities</p><div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end"><h2 className="section-title mt-4">Our expertise</h2><p className="max-w-sm text-sm leading-7 text-[#62605c]">One integrated team, from the first sketch to final installation.</p></div></Reveal><div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3">{expertise.map(([n,title,text],i)=><Reveal key={title} delay={(i%3)*.08}><article className="expertise-card"><span className="text-xs text-[#A78A63]">{n}</span><h3>{title}</h3><p>{text}</p><ArrowUpRight className="mt-8" size={20}/></article></Reveal>)}</div></div></section>
+<section className="section bg-[#F0EEE8]"><div className="site-container"><Reveal className="flex flex-col justify-between gap-8 md:flex-row md:items-end"><div><p className="eyebrow">Selected work</p><h2 className="section-title mt-4">Featured projects</h2></div><Link href="/projects" className="text-link">View all projects <ArrowRight size={18}/></Link></Reveal><div className="mt-12 grid gap-5 md:grid-cols-2">{projects.map(([name,category,image],i)=><Reveal key={name} delay={(i%2)*.1}><Link href="/projects" className={`project-card group ${i===0||i===3?"md:mt-10":""}`}><img src={image} alt={`${name} project`}/><div className="project-overlay"><span>{category}</span><h3>{name}</h3><span className="grid size-12 place-items-center rounded-full border border-white/50"><ArrowUpRight/></span></div></Link></Reveal>)}</div></div></section>
+<section className="relative min-h-[650px] bg-[#171717] text-white"><div className="absolute inset-0 opacity-50"><img className="h-full w-full object-cover" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1800&q=85" alt="Manufacturing facility"/></div><div className="absolute inset-0 bg-gradient-to-r from-black via-black/75 to-transparent"/><div className="site-container relative grid min-h-[650px] items-center py-20 lg:grid-cols-2"><Reveal><p className="eyebrow text-[#C8AD86]">Manufacturing</p><h2 className="section-title mt-5 text-white">Built with precision.<br/><em>Delivered with purpose.</em></h2><p className="mt-7 max-w-lg text-white/70 leading-8">Our integrated manufacturing capability brings engineering, materials and skilled execution together to deliver consistent quality at scale.</p><Link href="/manufacturing" className="button-outline mt-9">Explore manufacturing <ArrowRight size={18}/></Link></Reveal></div></section>
+<section className="section bg-[#F8F7F4]"><div className="site-container"><Reveal className="text-center"><p className="eyebrow">Why Space Design</p><h2 className="section-title mt-4">One partner. Complete capability.</h2></Reveal><div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">{[[Ruler,"Custom solutions","Made around the demands of your brand and space."],[Factory,"Quality craftsmanship","Disciplined production and attention to detail."],[Layers3,"End-to-end execution","Design, engineering, manufacture and installation."],[DraftingCompass,"Experienced team","Multi-disciplinary expertise under one roof."]].map(([Icon,title,text]:any)=><Reveal key={title}><div className="why-card"><Icon strokeWidth={1.3} size={38}/><h3>{title}</h3><p>{text}</p></div></Reveal>)}</div></div></section>
+<section className="cta text-white"><div className="site-container flex flex-col items-start justify-between gap-10 py-24 lg:flex-row lg:items-end"><Reveal><p className="eyebrow text-[#C8AD86]">Begin a conversation</p><h2 className="display mt-5 max-w-3xl text-5xl leading-none sm:text-7xl">Let's build something <em>exceptional.</em></h2></Reveal><Link href="/contact" className="button-light shrink-0">Contact us <ArrowUpRight size={18}/></Link></div></section>
+</main>}
